@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -45,6 +46,15 @@ class SangengtokendemoApplicationTests {
     void test3() {
         List<String> list = menuMapper.selectPermsByUserId(3L);
         list.forEach(System.out::println);
+    }
+
+    @Test
+    void test4() {
+        ArrayList<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        System.out.println(integers.contains(3));
+        System.out.println(integers.isEmpty());
     }
 
 }

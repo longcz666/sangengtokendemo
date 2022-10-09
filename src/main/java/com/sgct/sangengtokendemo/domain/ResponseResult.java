@@ -20,7 +20,7 @@ public class ResponseResult<T> {
      */
     private T data;
 
-    public ResponseResult(Integer code, String msg) {
+    public ResponseResult() {
         this.code = code;
         this.msg = msg;
     }
@@ -28,6 +28,11 @@ public class ResponseResult<T> {
     public ResponseResult(Integer code, T data) {
         this.code = code;
         this.data = data;
+    }
+
+    public ResponseResult(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
     }
 
     public Integer getCode() {
